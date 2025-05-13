@@ -50,35 +50,33 @@ body {
   place-content: center;
 }
 
-.text {
-  background-color: red;
-  width: 150px;
-  height: 50px;
-  display: grid;
-  place-items: center;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
 /* Excersise 1 */
 
-/* .arrow {
-  position: absolute;
-  left: 50%;
-  width: 15px;
+.clock-center {
+  width: 20px;
   aspect-ratio: 1/1;
-  background-color: rgb(52, 179, 220);
-  transform: translate(-50%, -50%) rotate(45deg);
-  z-index: -11;
-} */
-
-/* Excersise 2 */
-.close {
+  border-radius: 50%;
+  background-color: black;
+  z-index: 2;
+}
+.clock-line-wrapper {
   position: absolute;
-  right: 5px;
-  transform: translateY(-110%);
+  transform: translate(calc(75px - 50%), 10px);
 }
 
-.close:hover {
+.clock-line {
+  width: 4px;
+  height: 60px;
+  background-color: wheat;
+  border-radius: 2px;
+  transform-origin: center bottom;
+  /* excersise 1*/
+  /* excersise 2*/
+}
+
+.box:hover .clock-line-wrapper .clock-line {
   cursor: pointer;
+  transform: rotate(360deg);
+  transition: transform linear 12s;
+  /* transition: transform 12s steps(4, start); */
 }
