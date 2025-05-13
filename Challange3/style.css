@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.continer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+}
+
+.box {
+  background-color: rgb(52, 179, 220);
+  width: 150px;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+  color: white;
+  display: grid;
+  place-content: center;
+}
+
+/* Excersise 1 */
+
+.clock-center {
+  width: 20px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 2;
+}
+.clock-line-wrapper {
+  position: absolute;
+  transform: translate(calc(75px - 50%), 10px);
+}
+
+.clock-line {
+  width: 4px;
+  height: 60px;
+  background-color: wheat;
+  border-radius: 2px;
+  transform-origin: center bottom;
+  /* excersise 1*/
+  /* excersise 2*/
+}
+
+.box:hover .clock-line-wrapper .clock-line {
+  cursor: pointer;
+  transform: rotate(360deg);
+  transition: transform linear 12s;
+  /* transition: transform 12s steps(4, start); */
+}
